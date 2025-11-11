@@ -1,0 +1,750 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Manrope", "Unbounded", sans-serif;
+  overflow-x: hidden;
+  font-size: 0.833vw;
+  cursor: default;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.6563rem;
+  background: #bbbbbb;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.375rem rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 0.375rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.625rem;
+  background-color: #f9f9fd;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 0.625rem;
+  background: #30b04b;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: max-width;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.1875rem;
+}
+
+.first-section {
+  width: 115.1875rem;
+  height: 52.9375rem;
+  background-color: #f3f4f6;
+  border-radius: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.2392156863);
+          box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.2392156863);
+}
+.first-section header {
+  width: 113.875rem;
+  height: 6.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.75rem 0.625rem 0 0.625rem;
+  padding: 1.25rem 0.9375rem 1.25rem 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.062745098);
+          box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.062745098);
+}
+.first-section header .logo {
+  width: 12.625rem;
+  height: 3.125rem;
+}
+.first-section header nav {
+  width: 34.5625rem;
+  height: 1.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.9375rem;
+}
+.first-section header nav a {
+  text-transform: uppercase;
+  font-family: "Manrope";
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 13%;
+  color: #030712;
+  position: relative;
+}
+.first-section header nav a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 0.125rem;
+  background: #000;
+  width: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.first-section header nav a:hover::after {
+  width: 100%;
+}
+.first-section header .application {
+  width: 32.7125rem;
+  height: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.first-section header .application .choosing-city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10.775rem;
+  height: 1.9694rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.first-section header .application .choosing-city svg {
+  width: 2rem;
+  height: 2rem;
+}
+.first-section header .application .choosing-city a {
+  font-family: "Manrope";
+  font-size: 1.25rem;
+  font-weight: bold;
+  -webkit-text-decoration: underline dashed;
+          text-decoration: underline dashed;
+  text-underline-offset: 0.375rem;
+  color: #000;
+  position: relative;
+}
+.first-section header .application .choosing-city a::after {
+  position: absolute;
+  content: "";
+  bottom: -0.125rem;
+  display: block;
+  width: 100%;
+  height: 0.125rem;
+  background: #000;
+  width: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.first-section header .application .choosing-city a:hover::after {
+  width: 100%;
+}
+.first-section header .application button {
+  width: 16.9375rem;
+  height: 4.5rem;
+  border-radius: 1.5625rem;
+  border: none;
+  background-color: #30b04b;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 0.625rem rgba(59, 59, 59, 0.2862745098);
+          box-shadow: 0 0 0.625rem rgba(59, 59, 59, 0.2862745098);
+}
+.first-section header .application button:hover {
+  cursor: pointer;
+  background-color: #1f7736;
+}
+.first-section header .application button:active {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
+}
+.first-section header a:active {
+  -webkit-transition: 100ms ease;
+  transition: 100ms ease;
+  color: #757575;
+}
+.first-section header a:active::after {
+  background: #757575;
+  -webkit-transition: 100ms ease;
+  transition: 100ms ease;
+}
+.first-section h1 {
+  width: 63.7125rem;
+  height: 10.8125rem;
+  position: absolute;
+  top: 16.5625rem;
+  left: 3.8125rem;
+  font-family: "Manrope";
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.first-section .man {
+  width: 35.125rem;
+  height: 4.125rem;
+  position: absolute;
+  top: 22.5625rem;
+  left: 33rem;
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #272727;
+}
+.first-section .sign-up {
+  width: 53.625rem;
+  height: 13.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.875rem;
+  position: absolute;
+  top: 34.1875rem;
+  left: 3.8125rem;
+}
+.first-section .sign-up h4 {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #272727;
+}
+.first-section .sign-up .sign-up-btn {
+  width: 28.5625rem;
+  height: 7.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.9375rem;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #888;
+  padding-left: 0.8125rem;
+}
+.first-section .sign-up .sign-up-btn button {
+  border-radius: 1.5625rem;
+  border: none;
+  background-color: #30b04b;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 0.625rem rgba(59, 59, 59, 0.2862745098);
+          box-shadow: 0 0 0.625rem rgba(59, 59, 59, 0.2862745098);
+  width: 28.5625rem;
+  height: 5.3125rem;
+}
+.first-section .sign-up .sign-up-btn button:hover {
+  cursor: pointer;
+  background-color: #1f7736;
+}
+.first-section .sign-up .sign-up-btn button:active {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
+}
+.first-section .rectangle {
+  width: 35.9688rem;
+  height: 43.5494rem;
+  position: absolute;
+  top: 11.4375rem;
+  left: 79.375rem;
+  border-radius: 2.5rem;
+  rotate: 5.41deg;
+  background-color: #ededed;
+  -webkit-box-shadow: 0 0 1.875rem rgba(59, 59, 59, 0.1647058824);
+          box-shadow: 0 0 1.875rem rgba(59, 59, 59, 0.1647058824);
+}
+.first-section .rectangle2 {
+  width: 35.9688rem;
+  height: 43.5494rem;
+  position: absolute;
+  top: 12.475rem;
+  left: 80.7425rem;
+  rotate: 8.57deg;
+  background-color: #fff;
+  border-radius: 2.5rem;
+  -webkit-box-shadow: 0.125rem 0.25rem 0.9375rem rgba(59, 59, 59, 0.1647058824);
+          box-shadow: 0.125rem 0.25rem 0.9375rem rgba(59, 59, 59, 0.1647058824);
+}
+.first-section img {
+  width: 29.75rem;
+  height: 56.1875rem;
+  image-rendering: optimizeQuality;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  top: 9.5625rem;
+  left: 80.5rem;
+}
+
+.second-section {
+  width: 117.0625rem;
+  height: 67.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7.9375rem;
+  gap: 2.5rem;
+}
+.second-section h1 {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.second-section .mySwiper {
+  overflow: hidden;
+  height: 100vh;
+}
+.second-section .swipe-block {
+  width: 117.0625rem;
+  height: 60.625rem;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.second-section .swipe-block .custom-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+.second-section .swipe-block .custom-pagination .pagination-svg {
+  width: 6.25rem;
+  height: 0.375rem;
+  cursor: pointer;
+  -webkit-transition: fill-opacity 0.3s ease;
+  transition: fill-opacity 0.3s ease;
+}
+.second-section .swipe-block .custom-pagination .pagination-svg rect {
+  width: 100%;
+  height: 100%;
+  rx: 3;
+  fill: #212121;
+  fill-opacity: 0.08;
+}
+.second-section .swipe-block .custom-pagination .pagination-svg.active rect, .second-section .swipe-block .custom-pagination .pagination-svg.completed rect {
+  fill-opacity: 0.32;
+}
+.second-section .swipe-block .swiper {
+  width: 100%;
+  height: 100%;
+}
+.second-section .swipe-block .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.second-section .swipe-block .swiper-slide {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100vw;
+}
+.second-section .swipe-block .swiper-slide .slide {
+  width: 85.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3.125rem;
+}
+.second-section .swipe-block .swiper-slide .slide .about-block {
+  width: 41.6875rem;
+  height: 33.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.125rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.second-section .swipe-block .swiper-slide .slide .about-block .text-block {
+  width: 41.6875rem;
+  height: 24.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4.625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.second-section .swipe-block .swiper-slide .slide .about-block .text-block h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.second-section .swipe-block .swiper-slide .slide .about-block .text-block h4 {
+  width: 30rem;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.second-section .swipe-block .swiper-slide .slide .about-block .plant-tree {
+  width: 31.1875rem;
+  height: 7.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 33px;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #888;
+  padding-left: 0.8125rem;
+}
+.second-section .swipe-block .swiper-slide .slide .about-block .plant-tree button {
+  border-radius: 1.5625rem;
+  border: none;
+  background-color: #30b04b;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 0.625rem rgba(59, 59, 59, 0.2862745098);
+          box-shadow: 0 0 0.625rem rgba(59, 59, 59, 0.2862745098);
+  width: 31.1875rem;
+  height: 5.8125rem;
+}
+.second-section .swipe-block .swiper-slide .slide .about-block .plant-tree button:hover {
+  cursor: pointer;
+  background-color: #1f7736;
+}
+.second-section .swipe-block .swiper-slide .slide .about-block .plant-tree button:active {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
+}
+.second-section .swipe-block .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.second-section .swipe-block .firstImg {
+  width: 41.125rem !important;
+  height: 54.25rem !important;
+}
+.second-section .swipe-block .secondImg {
+  width: 49.75rem !important;
+  height: 49.75rem !important;
+}
+.second-section .swipe-block .thirdImg {
+  width: 49.75rem !important;
+  height: 49.75rem !important;
+}
+.second-section .swipe-block .swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.second-section .swipe-block .swiper-button-next,
+.second-section .swipe-block .swiper-button-prev {
+  width: 6rem !important;
+  height: 6rem !important;
+  background-color: #fff;
+  border-radius: 62.4375rem !important;
+  border: 0.0625rem solid rgba(33, 33, 33, 0.0784313725);
+  background-image: none !important;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+}
+.second-section .swipe-block .swiper-button-next::after,
+.second-section .swipe-block .swiper-button-prev::after {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(33, 33, 33, 0.2392156863);
+  -webkit-transition: 150ms ease-out;
+  transition: 150ms ease-out;
+}
+.second-section .swipe-block .swiper-button-next:hover::after,
+.second-section .swipe-block .swiper-button-prev:hover::after {
+  color: rgba(33, 33, 33, 0.4392156863);
+}
+.second-section .swipe-block .swiper-button-next:active::after,
+.second-section .swipe-block .swiper-button-prev:active::after {
+  color: #212121;
+}
+.second-section .swipe-block .swiper-button-next {
+  right: 1rem;
+}
+.second-section .swipe-block .swiper-button-prev {
+  left: 1rem;
+}
+
+.third-section {
+  width: 105.8125rem;
+  height: 74.6875rem;
+  margin-top: 12.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.third-section h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.third-section .description {
+  width: 99.0625rem;
+  height: 30.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.125rem;
+}
+.third-section .description .desc-block {
+  width: 31.5rem;
+  height: 30.6875rem;
+  border-radius: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.2392156863);
+          box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.2392156863);
+}
+.third-section .description .desc-block p {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 1.625rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.third-section .description .desc-block img {
+  width: 29.5rem;
+  height: 27.375rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.third-section .description .DBF {
+  background-color: #30b04b;
+  background-image: url(../src/img/bg-tree.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 3.3125rem;
+  color: #fff;
+}
+.third-section .description .DBS {
+  background-color: #f4f3f3;
+}
+.third-section .description .DBT {
+  border: 0.375rem solid #30b04b;
+}
+.third-section .third-text-blocks {
+  width: 77.5625rem;
+  height: 20.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+}
+.third-section .third-text-blocks .text-block {
+  width: 36.9375rem;
+  height: 20.875rem;
+  border-radius: 3.125rem;
+  border: 0.625rem solid #D6D6D6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.2392156863);
+          box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.2392156863);
+}
+.third-section .third-text-blocks .text-block p {
+  width: 34.4375rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 2.4375rem;
+  letter-spacing: -0.01em;
+}
+.third-section button {
+  border-radius: 1.5625rem;
+  border: none;
+  background-color: #30b04b;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 0.625rem rgba(59, 59, 59, 0.2862745098);
+          box-shadow: 0 0 0.625rem rgba(59, 59, 59, 0.2862745098);
+  width: 46.875rem;
+  height: 7.5rem;
+}
+.third-section button:hover {
+  cursor: pointer;
+  background-color: #1f7736;
+}
+.third-section button:active {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
+}
