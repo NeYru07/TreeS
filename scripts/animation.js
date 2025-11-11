@@ -15,7 +15,7 @@ tl.from(
   ".rectangle",
   {
     duration: 0.8,
-    x: 400, // выезд справа
+    x: 400,
     opacity: 0,
     ease: "power2.out",
     rotation: 50,
@@ -26,13 +26,13 @@ tl.from(
     ".rectangle2",
     {
       duration: 0.8,
-      x: 400, // выезд справа
+      x: 400,
       opacity: 0,
       ease: "power2.out",
       rotation: 50,
     },
     "-=0.3"
-  ) // Начинается на 0.3с раньше окончания предыдущей анимации
+  )
   .fromTo(
     ".hero-image",
     {
@@ -101,7 +101,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
     trigger: ".third-section",
     start: "top 80%",
-    toggleActions: "play none none rotation",
+    toggleActions: "play none none none",
     onEnter: () => {
         const tl = gsap.timeline();
         
@@ -146,11 +146,10 @@ ScrollTrigger.create({
     }
 });
 
-gsap.set(".third-section button", { position: "relative", top: 400, opacity: 0 });
+gsap.set(".third-section button", { opacity: 0 });
 
 gsap.to(".third-section button", {
   duration: 1.5,
-  top: 0,
   opacity: 1,
   ease: "power3.out",
   delay: 0.7,
