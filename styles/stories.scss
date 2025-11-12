@@ -1,0 +1,324 @@
+// Veriables
+@mixin h1 {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #000;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin btn {
+  border-radius: 1.5625rem;
+  border: none;
+  background-color: #30b04b;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 0.625rem #3b3b3b49;
+}
+
+@mixin green-btn-animation {
+  button:hover {
+    cursor: pointer;
+    background-color: #1f7736;
+  }
+  button:active {
+    transition: 0.1s;
+    transform: scale(0.98);
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0 0 1.25rem #3b3b3b3d;
+}
+
+.active {
+  text-decoration: underline 0.1875rem #16a34a !important;
+  text-underline-offset: 0.25rem !important;
+}
+.active::after {
+  all: unset;
+}
+.active:hover::after {
+  all: unset;
+}
+
+.first-section {
+  img {
+    width: 46rem;
+    height: 46rem;
+    position: absolute;
+    top: 10.8125rem;
+    left: -8.8438rem;
+  }
+  .second-img {
+    position: absolute;
+    top: 10.8125rem;
+    left: 76.4063rem;
+  }
+
+  .middle-block {
+    width: 47.4375rem;
+    height: 33.375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+    align-items: center;
+    position: absolute;
+    top: 14rem;
+    left: 33.1563rem;
+
+    .text-block {
+      width: inherit;
+      height: 24.3125rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3.125rem;
+      text-align: center;
+
+      h1 {
+        font-family: "Manrope";
+        font-weight: 800;
+        font-size: 4rem;
+        color: #1d1d1d;
+      }
+
+      p {
+        font-family: "Manrope";
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: #4d4d4d;
+      }
+    }
+
+    button {
+      @include btn;
+      width: 27.25rem;
+      height: 5.3125rem;
+    }
+    @include green-btn-animation;
+  }
+}
+
+.second-section {
+  width: 92.3125rem;
+  height: 52.9375rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8.125rem;
+  gap: 2.5rem;
+
+  h1 {
+    @include h1;
+  }
+
+  .fond {
+	width: inherit;
+	height: 43.5625rem;
+	display: flex;
+	gap: 1.875rem;
+
+	.left-block{
+		width: 44.0625rem;
+		height: inherit;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		p{
+			width: inherit;
+			height: 12.25rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			font-family: 'Manrope';
+			font-weight: 600;
+			font-size: 2.25rem;
+		}
+		img{
+			width: 33.75rem;
+			height: 31.3125rem;
+		}
+	}
+
+	.right-block{
+		width: 46.375rem;
+		height: 43.5625rem;
+		display: flex;
+		flex-direction: column;
+		gap: 3.125rem;
+		padding: 4.375rem 5.4375rem;
+		border-radius: 3.75rem;
+		background-color: #16A34A;
+		@include shadow;
+
+		h2{
+			font-family: 'Manrope';
+			font-weight: 800;
+			font-size: 2.5rem;
+			text-align: center;
+			color: #fff;
+		}
+		.inputs{
+			width: 35.5rem;
+			height: 20.6875rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1.25rem;
+		}
+		button{
+			@include btn;
+			width: 16.75rem;
+			height: 5.3125rem;
+			background-color: #354052;
+			align-self: center;
+		}
+		@include green-btn-animation;
+		button:hover{background-color: #1e242e;}
+	}
+  }
+}
+
+.third-section{
+	width: 87.3125rem;
+	height: 10.6875rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	margin-top: 8.125rem;
+
+	h1{@include h1;}
+
+	.grid-numbers{
+		width: inherit;
+		height: 5.125rem;
+		display: flex;
+		justify-content: space-between;
+
+		.number{
+			width: max-content;
+			height: inherit;
+			display: flex;
+			gap: 0.9375rem;
+			align-items: center;
+
+			svg{
+				width: 4.75rem;
+				height: 1.5625rem;
+			}
+
+			.number-info{
+				width: max-content;
+				height: inherit;
+				display: flex;
+				flex-direction: column;
+
+				h2{
+					font-family: 'Manrope';
+					font-weight: 800;
+					font-size: 2.5rem;
+					text-transform: uppercase;
+					color: #166534;
+				}
+
+				p{
+					width: inherit;
+					font-family: 'Manrope';
+					font-weight: 400;
+					font-size: 1.25rem;
+				}
+			}
+		}
+	}
+}
+
+.fourth-section{
+	width: 107.625rem;
+	height: 59.625rem;
+	margin-top: 8.125rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+
+	h1{@include h1;}
+
+	.grid-cards{
+		width: inherit;
+		height: 54.0625rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1.875rem;
+
+		.card{
+			width: 34.625rem;
+			height: 54.0625rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1.875rem;
+			padding-bottom: 1.875rem;
+			background-color: #f3f4f6;
+			border-radius: 3.75rem;
+			@include shadow;
+
+			img{
+				width: inherit;
+				height: 22.375rem;
+				border-radius: 3.75rem 3.75rem 0 0;
+			}
+
+			button{
+				@include btn;
+				width: 19rem;
+				height: 5.3125rem;
+				align-self: center;
+			}
+			@include green-btn-animation;
+
+			.card-text{
+				width: inherit;
+				height: 20.75rem;
+				display: flex;
+				flex-direction: column;
+				gap: 3.75rem;
+				padding: 0 1.25rem;
+
+				span{
+					font-family: 'Manrope';
+					font-weight: 600;
+					font-size: 1rem;
+					align-self: flex-end;
+				}
+
+				.card-about-text{
+					width: 32.125rem;
+					height: 15.625rem;
+					display: flex;
+					flex-direction: column;
+					gap: 1.875rem;
+
+					h2{
+						width: 29.875rem;
+						font-family: 'Manrope';
+						font-weight: 800;
+						font-size: 2rem;
+						text-transform: uppercase;
+					}
+
+					p{
+						font-family: 'Manrope';
+						font-weight: 400;
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+  margin-top: 8.125rem;
+}

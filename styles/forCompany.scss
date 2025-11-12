@@ -1,0 +1,511 @@
+// Veriables
+@mixin h1 {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 2rem;
+  color: #000;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+@mixin btn {
+  border-radius: 1.5625rem;
+  border: none;
+  background-color: #30b04b;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 0.625rem #3b3b3b49;
+}
+
+@mixin green-btn-animation {
+  button:hover {
+    cursor: pointer;
+    background-color: #1f7736;
+  }
+  button:active {
+    transition: 0.1s;
+    transform: scale(0.98);
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0 0 1.25rem #3b3b3b3d;
+}
+
+.first-section .text-block {
+  width: 53rem;
+  height: 25.6875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9375rem;
+  position: absolute;
+  top: 15.5rem;
+  left: 6.5938rem;
+
+  h1 {
+    all: unset;
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 3rem;
+    color: #1d1d1d;
+    text-align: center;
+  }
+
+  .text-btn {
+    width: inherit;
+    height: 16.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.9375rem;
+    align-items: center;
+
+    p {
+      height: 8.25rem;
+      font-family: "Manrope";
+      font-size: 1.5rem;
+      text-align: center;
+      color: #4d4d4d;
+    }
+
+    button {
+      @include btn;
+      width: 27.25rem;
+      height: 5.3125rem;
+    }
+    @include green-btn-animation;
+  }
+}
+
+.first-section img {
+  width: 50.9375rem;
+  height: 45.6875rem;
+  position: absolute;
+  top: 7.1875rem;
+  left: 64.2813rem;
+}
+
+.active {
+  text-decoration: underline 0.1875rem #16a34a !important;
+  text-underline-offset: 0.25rem !important;
+}
+.active::after {
+  all: unset;
+}
+.active:hover::after {
+  all: unset;
+}
+
+.second-section {
+  width: 97.9375rem;
+  height: 43.5625rem;
+  margin-top: 8.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  .head-text {
+    width: 40.875rem;
+    height: 6.125rem;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      @include h1;
+    }
+    p {
+      font-family: "Manrope";
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #818181;
+    }
+  }
+
+  .cards {
+    width: inherit;
+    height: 34.9375rem;
+    display: flex;
+    gap: 3.125rem;
+    align-items: end;
+
+    .card {
+      width: 30.5625rem;
+      height: 30.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3.125rem;
+      padding: 1.875rem 1.25rem;
+      background-color: #f3f4f6;
+      border-radius: 2.5rem;
+      align-items: center;
+      @include shadow;
+
+      .card-head {
+        width: 28.0625rem;
+        height: 5.375rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        align-items: center;
+
+        h1 {
+          font-family: "Manrope";
+          font-weight: 800;
+          font-size: 2.25rem;
+          text-transform: uppercase;
+        }
+
+        p {
+          width: inherit;
+          font-family: "Manrope";
+          font-weight: 800;
+          font-size: 1.25rem;
+          text-align: center;
+          color: #5b5b5b;
+        }
+      }
+
+      ul {
+        width: 28.0625rem;
+        height: 9.625rem;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+
+        li {
+          position: relative;
+          padding-left: 3rem; /* Отступ текста от маркера */
+          font-size: 1rem;
+          font-family: "Manrope";
+          font-weight: 800;
+          font-size: 1rem;
+        }
+
+        li::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #000;
+          font-weight: 400;
+          padding-left: 2rem;
+        }
+      }
+
+      .card-footer {
+        width: 23.6875rem;
+        height: 5.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+
+        p {
+          height: 2.4375rem;
+          display: block;
+          width: 100%;
+          text-align: center;
+          background-color: #747474;
+          border-radius: 12.5rem;
+          padding: 0.625rem;
+          color: #fff;
+          font-family: "Manrope";
+          font-weight: 700;
+          font-size: 0.875rem;
+        }
+
+        .top-text {
+          display: flex;
+          gap: 0.3125rem;
+        }
+      }
+    }
+    .green-card {
+      height: 34.9375rem;
+      background-color: #30b04b;
+
+      .card-head {
+        height: 7.0625rem;
+        h1 {
+          color: #fff;
+        }
+        p {
+          color: #414141;
+        }
+      }
+      ul {
+        height: 12.375rem;
+      }
+      ul li {
+        color: #fff !important;
+      }
+      ul li::before {
+        color: #fff !important;
+      }
+      .card-footer p {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.third-section {
+  width: 99.375rem;
+  height: 32.75rem;
+  display: flex;
+  gap: 4.375rem;
+  margin-top: 8.125rem;
+  align-items: center;
+
+  .left-img {
+    width: 46.5rem;
+    height: 32.75rem;
+    border-radius: 2.5rem;
+    background-color: #f3f4f6;
+    @include shadow;
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: contain;
+    }
+  }
+
+  .text-block {
+    width: 48.5rem;
+    height: 22.5625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    h1 {
+      @include h1;
+    }
+
+    ul {
+      width: inherit;
+      height: 15.1875rem;
+      list-style-type: none;
+
+      li {
+        font-family: "Manrope";
+        font-weight: 500;
+        font-size: 1.25rem;
+        padding-left: 2rem;
+        position: relative;
+      }
+
+      li::before {
+        content: "•";
+        color: black;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.2em;
+      }
+    }
+  }
+}
+
+.fourth-section {
+  width: 99.4375rem;
+  height: 46.9375rem;
+  margin-top: 8.125rem;
+  display: flex;
+  gap: 1.25rem;
+
+  .feedback {
+    width: 46.5625rem;
+    height: 46.9375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 3.125rem 1.875rem;
+    border-radius: 3.75rem;
+    background-color: #30b04b;
+    @include shadow;
+
+    .feadback-head {
+      width: 42.8125rem;
+      height: 6.4375rem;
+      display: flex;
+      gap: 0.625rem;
+      flex-direction: column;
+
+      h1 {
+        font-family: "Manrope";
+        font-weight: 700;
+        font-size: 3rem;
+        color: #fff;
+      }
+
+      p {
+        font-family: "Manrope";
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #4d4d4d;
+      }
+    }
+
+    .feedback-main {
+      width: 42.8125rem;
+      height: 31.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: center;
+
+      .inputs {
+        width: inherit;
+        height: 25.1875rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+
+        label {
+          font-family: "Manrope";
+          font-weight: 700;
+          font-size: 1.25rem;
+          color: #fff;
+        }
+
+        input {
+          height: 3.875rem;
+          padding: 1.25rem 1.875rem;
+          border: none;
+          border-radius: 1.25rem;
+          background-color: #fff;
+          font-family: "Manrope";
+          font-weight: 600;
+          font-size: 1rem;
+        }
+        input::placeholder {
+          font-family: "Manrope";
+          font-weight: 600;
+          font-size: 1rem;
+          color: #000;
+          opacity: 50%;
+        }
+        input:focus {
+          outline: none;
+        }
+        textarea {
+          width: 100%;
+          min-height: 3.875rem;
+          height: auto;
+          padding: 1.25rem 1.875rem;
+          border: none;
+          border-radius: 1.25rem;
+          background-color: #fff;
+          font-family: "Manrope";
+          font-weight: 600;
+          font-size: 1rem;
+          line-height: 1.4;
+          resize: none !important;
+          overflow: hidden;
+        }
+
+        textarea::placeholder {
+          font-family: "Manrope";
+          font-weight: 600;
+          font-size: 1rem;
+          color: #000;
+          opacity: 50%;
+        }
+
+        textarea:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        width: 13.6875rem;
+        height: 5.3125rem;
+        @include btn;
+        background-color: #354052;
+        @include shadow;
+      }
+      @include green-btn-animation;
+      button:hover {
+        background-color: #1e242e;
+      }
+    }
+  }
+
+  .right-block {
+    width: 51.625rem;
+    height: 46.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .map {
+      width: inherit;
+      height: 30.1875rem;
+      border-radius: 3.75rem;
+      @include shadow;
+
+      img {
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+      }
+    }
+
+    .contacts {
+      width: inherit;
+      height: 15.1875rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding: 2.5rem 1.875rem;
+      background-color: #f3f4f6;
+      border-radius: 2.5rem;
+      @include shadow;
+
+      h1 {
+        font-family: "Manrope";
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+
+      .contacts-info {
+        width: 47.875rem;
+        height: 5.5rem;
+        display: flex;
+        gap: 1.25rem;
+
+        .info {
+          width: max-content;
+          height: max-content;
+          display: flex;
+          gap: 0.3125rem;
+          align-items: center;
+
+          svg {
+            width: 3.75rem;
+            height: 3.75rem;
+          }
+
+          p {
+            width: fit-content;
+            font-family: "Manrope";
+            font-weight: 500;
+            font-size: 1rem;
+          }
+          .green-p {
+            color: #16a34a;
+            font-weight: 700;
+            font-size: 1.25rem;
+            width: 11.6875rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 8.125rem;
+}
