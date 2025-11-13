@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -285,6 +284,9 @@ footer {
   color: #fff;
   -webkit-box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.2392156863);
           box-shadow: 0 0 1.25rem rgba(59, 59, 59, 0.2392156863);
+}
+footer .mobile {
+  display: none;
 }
 footer .head {
   width: 115.625rem;
@@ -603,7 +605,7 @@ footer .basement span p {
   padding: 1.25rem 1.875rem;
   border: none;
   border-radius: 1.25rem;
-  background: #EFEFEF;
+  background: #efefef;
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
   color: #000;
@@ -616,12 +618,12 @@ footer .basement span p {
 }
 .custom-select select:focus {
   outline: none;
-  border-color: #30B04B;
+  border-color: #30b04b;
   -webkit-box-shadow: 0 0 0 0.1875rem rgba(48, 176, 75, 0.1);
           box-shadow: 0 0 0 0.1875rem rgba(48, 176, 75, 0.1);
 }
 .custom-select select:hover {
-  border-color: #30B04B;
+  border-color: #30b04b;
 }
 .custom-select .select-arrow {
   position: absolute;
@@ -665,7 +667,7 @@ footer .basement span p {
   cursor: pointer;
 }
 .submit-btn:hover {
-  background: #1F7736;
+  background: #1f7736;
   -webkit-transform: translateY(-0.125rem);
       -ms-transform: translateY(-0.125rem);
           transform: translateY(-0.125rem);
@@ -700,7 +702,7 @@ footer .basement span p {
 }
 
 .seedlings-selector {
-  background: #EFEFEF;
+  background: #efefef;
   border-radius: 1.25rem;
   padding: 1.5rem;
 }
@@ -740,7 +742,7 @@ footer .basement span p {
   width: 2.5rem;
   height: 2.5rem;
   border: none;
-  background: #30B04B;
+  background: #30b04b;
   color: white;
   border-radius: 0.5rem;
   font-size: 1.25rem;
@@ -759,7 +761,7 @@ footer .basement span p {
           justify-content: center;
 }
 .seedlings-amount .amount-controls .amount-btn:hover {
-  background: #1F7736;
+  background: #1f7736;
 }
 .seedlings-amount .amount-controls .amount-btn:disabled {
   background: #ccc;
@@ -776,7 +778,7 @@ footer .basement span p {
   font-family: "Manrope", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #30B04B;
+  color: #30b04b;
   min-width: 5rem;
   text-align: right;
 }
@@ -788,8 +790,8 @@ footer .basement span p {
 }
 
 .hectare-option {
-  background: #EFEFEF;
-  border: 2px solid transparent;
+  background: #efefef;
+  border: 0.125rem solid transparent;
   border-radius: 1.25rem;
   padding: 1.5rem 1rem;
   text-align: center;
@@ -806,14 +808,14 @@ footer .basement span p {
   gap: 0.5rem;
 }
 .hectare-option:hover {
-  border-color: #30B04B;
-  -webkit-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-          transform: translateY(-2px);
+  border-color: #30b04b;
+  -webkit-transform: translateY(-0.125rem);
+      -ms-transform: translateY(-0.125rem);
+          transform: translateY(-0.125rem);
 }
 .hectare-option.active {
-  background: #30B04B;
-  border-color: #30B04B;
+  background: #30b04b;
+  border-color: #30b04b;
 }
 .hectare-option.active .hectare-amount,
 .hectare-option.active .hectare-price {
@@ -829,7 +831,7 @@ footer .basement span p {
   font-family: "Manrope", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
-  color: #30B04B;
+  color: #30b04b;
 }
 
 .total-sum {
@@ -842,7 +844,7 @@ footer .basement span p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #EFEFEF;
+  background: #efefef;
   border-radius: 1.25rem;
   padding: 1.5rem 2rem;
   margin-top: 1rem;
@@ -857,7 +859,7 @@ footer .basement span p {
   font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #30B04B;
+  color: #30b04b;
 }
 
 .company-submit {
@@ -866,7 +868,7 @@ footer .basement span p {
   max-width: 20rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .company-modal {
     padding: 2rem 1.5rem;
     margin: 1rem;
@@ -890,17 +892,44 @@ form {
   height: 19.125rem;
 }
 
+.form-group {
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.75rem;
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  -webkit-transform: translateY(0.375rem);
+      -ms-transform: translateY(0.375rem);
+          transform: translateY(0.375rem);
+  -webkit-animation: slideDown 0.3s ease;
+          animation: slideDown 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+form {
+  width: 56.125rem;
+  height: 19.125rem;
+}
+
 .input-field:focus {
   border-color: #007bff;
-  -webkit-box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-          box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  -webkit-box-shadow: 0 0 0 0.1875rem rgba(0, 123, 255, 0.1);
+          box-shadow: 0 0 0 0.1875rem rgba(0, 123, 255, 0.1);
 }
 
 .input-field.error {
   border-color: #dc3545;
   background-color: #fff5f5;
-  -webkit-box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
-          box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+  -webkit-box-shadow: 0 0 0 0.1875rem rgba(220, 53, 69, 0.1);
+          box-shadow: 0 0 0 0.1875rem rgba(220, 53, 69, 0.1);
 }
 
 .input-field.success {
@@ -908,39 +937,34 @@ form {
   background-color: #f8fff9;
 }
 
-.error-message {
-  color: #dc3545;
-  font-size: 12px;
-  margin-top: 6px;
-  display: block;
-  font-weight: 500;
-}
-
 .success-message {
   color: #28a745;
-  font-size: 12px;
-  margin-top: 6px;
+  font-size: 0.75rem;
+  margin-top: 0.375rem;
   display: block;
   font-weight: 500;
 }
 
-/* Дополнительные стили для улучшения UX */
 .input-field::-webkit-input-placeholder {
   color: #6c757d;
   opacity: 0.7;
 }
+
 .input-field::-moz-placeholder {
   color: #6c757d;
   opacity: 0.7;
 }
+
 .input-field:-ms-input-placeholder {
   color: #6c757d;
   opacity: 0.7;
 }
+
 .input-field::-ms-input-placeholder {
   color: #6c757d;
   opacity: 0.7;
 }
+
 .input-field::placeholder {
   color: #6c757d;
   opacity: 0.7;
@@ -952,18 +976,17 @@ form {
   cursor: not-allowed;
 }
 
-/* Стили для группы с иконками если есть */
 .input-with-icon {
   position: relative;
 }
 
 .input-with-icon .input-field {
-  padding-left: 40px;
+  padding-left: 2.5rem;
 }
 
 .input-with-icon .icon {
   position: absolute;
-  left: 12px;
+  left: 0.75rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -980,37 +1003,44 @@ form {
   color: #28a745;
 }
 
-/* Анимация появления ошибки */
-.error-message {
-  -webkit-animation: slideDown 0.3s ease;
-          animation: slideDown 0.3s ease;
-}
-
 @-webkit-keyframes slideDown {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateY(-0.25rem);
+            transform: translateY(-0.25rem);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0.375rem);
+            transform: translateY(0.375rem);
   }
 }
 
 @keyframes slideDown {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateY(-0.25rem);
+            transform: translateY(-0.25rem);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0.375rem);
+            transform: translateY(0.375rem);
   }
 }
+.required-field::after {
+  content: " *";
+  color: #dc3545;
+}
+
+.input-field:hover:not(.error):not(:focus) {
+  border-color: #adb5bd;
+}
+
+.input-field.error:hover {
+  border-color: #c82333;
+}
+
 /* Стили для обязательных полей */
 .required-field::after {
   content: " *";
@@ -1024,4 +1054,112 @@ form {
 
 .input-field.error:hover {
   border-color: #c82333;
+}
+
+@media (max-width: 48rem) {
+  html {
+    font-size: 3.333vw;
+  }
+  .logo {
+    width: 9.0625rem;
+    height: 1.875rem;
+  }
+  .first-section {
+    width: 28.6875rem;
+    height: 47.75rem;
+  }
+  .first-section header {
+    width: 27.75rem;
+    height: 5.3125rem;
+    margin: 0.3125rem 0.4688rem 0 0.4688rem;
+    padding: 0 1.25rem;
+    border-radius: 2.5rem;
+  }
+  .first-section header nav {
+    display: none;
+  }
+  .first-section header .application {
+    display: none;
+  }
+  .choosing-city {
+    display: none;
+  }
+  footer {
+    width: 30rem;
+    height: 28.9375rem;
+    gap: 1.25rem;
+    padding-top: 0.625rem;
+  }
+  footer .head {
+    width: 100%;
+    height: 3.125rem;
+    margin: 0 0.5469rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .head .head-logo {
+    width: 8.6944rem;
+    height: 1.875rem;
+  }
+  footer .head .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .head .desktop {
+    display: none;
+  }
+  footer .head .social-networkc {
+    width: 13.3125rem;
+    height: 1.375rem;
+    gap: 0.9375rem;
+  }
+  footer .head .social-networkc p {
+    font-size: 1rem;
+  }
+  footer .head .social-networkc .social-icons {
+    gap: 0.9375rem;
+  }
+  footer .head .social-networkc .social-icons svg {
+    width: 2rem;
+    height: 1.25rem;
+  }
+  footer .links {
+    width: 13.3125rem;
+    height: 11.4375rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.5625rem;
+    padding: 0;
+  }
+  footer .links a {
+    font-size: 1.25rem;
+  }
+  footer .basement {
+    width: 30rem;
+    height: 7.375rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.625rem;
+  }
+  footer .basement p,
+  footer .basement span p {
+    text-align: center;
+    font-size: 0.7137rem;
+    height: auto;
+  }
 }
