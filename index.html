@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
-	 <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <link
       rel="shortcut icon"
       href="./src/favicon/favicon.ico"
@@ -16,6 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/zod@3.22.4/lib/index.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
     <title>ДеревьЯ</title>
   </head>
   <body>
@@ -62,9 +64,9 @@
                 fill="#278640"
               />
             </svg>
-            <a href="#">Выбор города</a>
+            <a href="#" class="open-modal-link">Выбор города</a>
           </div>
-          <button>Оставить заявку</button>
+          <button class="open-company-modal">Оставить заявку</button>
         </div>
       </header>
       <h1>
@@ -80,7 +82,9 @@
           что-то своё: живое, растущее, зависимое от него.
         </h4>
         <div class="sign-up-btn">
-          <button class="inscribe">Записаться на посвещение</button>
+          <button class="inscribe open-company-modal">
+            Записаться на посвещение
+          </button>
           <p>5 000 ₽ — вклад в лес и в характер ребёнка</p>
         </div>
       </div>
@@ -167,7 +171,7 @@
                     </h4>
                   </div>
                   <div class="plant-tree">
-                    <button>Посадить семейное дерево</button>
+                    <button class="open-company-modal" >Посадить семейное дерево</button>
                     <p>5 000 ₽ — ваша традиция, ваш лес, ваш след</p>
                   </div>
                 </div>
@@ -187,7 +191,7 @@
                     </h4>
                   </div>
                   <div class="plant-tree">
-                    <button>Посадить семейное дерево</button>
+                    <button class="open-company-modal" >Посадить семейное дерево</button>
                     <p>5 000 ₽ — ваша традиция, ваш лес, ваш след</p>
                   </div>
                 </div>
@@ -208,7 +212,9 @@
                     </h4>
                   </div>
                   <div class="plant-tree">
-                    <button>Посадить семейное дерево</button>
+                    <button class="open-company-modal">
+                      Посадить семейное дерево
+                    </button>
                     <p>5 000 ₽ — ваша традиция, ваш лес, ваш след</p>
                   </div>
                 </div>
@@ -258,7 +264,7 @@
           </p>
         </div>
       </div>
-      <button>Посадить дерево в роще славы</button>
+      <button class="open-company-modal">Посадить дерево в роще славы</button>
     </div>
 
     <div class="fourth-section">
@@ -417,12 +423,17 @@
       <h1>Видео фото о нашей работе</h1>
       <div class="video-block">
         <div class="main-video">
-          <video src="./src/video/video.mp4" autoplay preload="auto" controls></video>
+          <video
+            src="./src/video/video.mp4"
+            autoplay
+            preload="auto"
+            controls
+          ></video>
         </div>
 
         <div class="photo-slider">
           <img src="./src/img/photo1.png" alt="photo1" />
-          <img src="./src/img/photo2.png" alt="photo2"  class="scale"/>
+          <img src="./src/img/photo2.png" alt="photo2" class="scale" />
           <img src="./src/img/photo3.png" alt="photo3" />
         </div>
       </div>
@@ -439,113 +450,128 @@
         <p>Разработка “ООО ДеревьЯ”. Все права защищены</p>
       </div>
       <div class="form-block">
-        <div class="inputs-block">
-          <div class="names">
-            <input type="text" placeholder="Имя" />
-            <input type="text" placeholder="Фамилия" />
-          </div>
-          <input type="email" placeholder="Почта" />
-          <input type="tel" placeholder="Номер телефона" />
-          <div class="drop-inputs">
+        <form id="applicationForm" class="application-form">
+          <div class="inputs-block">
+            <div class="names">
+              <input
+                type="text"
+                placeholder="Имя"
+                id="firstName"
+                name="firstName"
+              />
+              <input
+                type="text"
+                placeholder="Фамилия"
+                id="lastName"
+                name="lastName"
+              />
+            </div>
+            <input type="email" placeholder="Почта" id="email" name="email" />
             <input
-              list="city-list"
-              name="city"
-              placeholder="Москва"
-              class="custom-input"
-              id="city-select"
+              type="tel"
+              placeholder="Номер телефона"
+              id="phone"
+              name="phone"
             />
-            <datalist id="city-list">
-              <option value="Москва"></option>
-              <option value="Санкт-Петербург"></option>
-              <option value="Новосибирск"></option>
-              <option value="Екатеринбург"></option>
-              <option value="Казань"></option>
-              <option value="Нижний Новгород"></option>
-              <option value="Челябинск"></option>
-              <option value="Самара"></option>
-              <option value="Тольятти"></option>
-              <option value="Омск"></option>
-              <option value="Ростов-на-Дону"></option>
-              <option value="Уфа"></option>
-              <option value="Красноярск"></option>
-              <option value="Воронеж"></option>
-              <option value="Пермь"></option>
-              <option value="Волгоград"></option>
-            </datalist>
-            <input
-              list="streets-list"
-              name="street"
-              placeholder="Арбат"
-              class="custom-input"
-              id="street-input"
-            />
-            <datalist id="streets-list">
-              <!-- Москва -->
-              <option value="Тверская улица"></option>
-              <option value="Арбат"></option>
-              <option value="Новый Арбат"></option>
-              <option value="Кутузовский проспект"></option>
-              <option value="Ленинградский проспект"></option>
-              <option value="Проспект Мира"></option>
-              <option value="Улица Горького"></option>
-              <option value="Садовое кольцо"></option>
-              <option value="Бульварное кольцо"></option>
-              <option value="Улица 1905 года">
-                <!-- Санкт-Петербург -->
-              </option>
-
-              <option value="Невский проспект"></option>
-              <option value="Литейный проспект"></option>
-              <option value="Васильевский остров"></option>
-              <option value="Петроградская сторона"></option>
-              <option value="Улица Рубинштейна"></option>
-              <option value="Каменноостровский проспект"></option>
-              <option value="Московский проспект"></option>
-              <option value="Большой проспект П.С."></option>
-              <option value="Английская набережная"></option>
-              <option value="Улица Жуковского">
-                <!-- Новосибирск -->
-              </option>
-
-              <option value="Красный проспект"></option>
-              <option value="Улица Ленина"></option>
-              <option value="Улица Кирова"></option>
-              <option value="Улица Гоголя"></option>
-              <option value="Улица Дуси Ковальчук"></option>
-              <option value="Улица Богдана Хмельницкого"></option>
-              <option value="Улица Сибревкома"></option>
-              <option value="Улица Фрунзе"></option>
-              <option value="Улица Нарымская"></option>
-              <option value="Улица Каменская">
-                <!-- Екатеринбург -->
-              </option>
-
-              <option value="Проспект Ленина"></option>
-              <option value="Улица Малышева"></option>
-              <option value="Улица Куйбышева"></option>
-              <option value="Улица 8 Марта"></option>
-              <option value="Улица Луначарского"></option>
-              <option value="Улица Щорса"></option>
-              <option value="Улица Толмачёва"></option>
-              <option value="Улица Хохрякова"></option>
-              <option value="Улица Белинского"></option>
-              <option value="Улица Амундсена"></option>
-
-              <!-- Казань -->
-              <option value="Улица Баумана"></option>
-              <option value="Улица Кремлёвская"></option>
-              <option value="Проспект Победы"></option>
-              <option value="Улица Декабристов"></option>
-              <option value="Улица Чистопольская"></option>
-              <option value="Улица Адоратского"></option>
-              <option value="Улица Вишневского"></option>
-              <option value="Улица Гаврилова"></option>
-              <option value="Улица Павлюхина"></option>
-              <option value="Улица Сибгата Хакима"></option>
-            </datalist>
+            <div class="drop-inputs">
+              <input
+                list="city-list"
+                name="city"
+                placeholder="Москва"
+                class="custom-input"
+                id="city"
+              />
+              <datalist id="city-list">
+                <option value="Москва"></option>
+                <option value="Санкт-Петербург"></option>
+                <option value="Новосибирск"></option>
+                <option value="Екатеринбург"></option>
+                <option value="Казань"></option>
+                <option value="Нижний Новгород"></option>
+                <option value="Челябинск"></option>
+                <option value="Самара"></option>
+                <option value="Тольятти"></option>
+                <option value="Омск"></option>
+                <option value="Ростов-на-Дону"></option>
+                <option value="Уфа"></option>
+                <option value="Красноярск"></option>
+                <option value="Воронеж"></option>
+                <option value="Пермь"></option>
+                <option value="Волгоград"></option>
+              </datalist>
+              <input
+                list="streets-list"
+                name="street"
+                placeholder="Арбат"
+                class="custom-input"
+                id="street"
+              />
+              <datalist id="streets-list">
+                <!-- Москва -->
+                <option value="Тверская улица"></option>
+                <option value="Арбат"></option>
+                <option value="Новый Арбат"></option>
+                <option value="Кутузовский проспект"></option>
+                <option value="Ленинградский проспект"></option>
+                <option value="Проспект Мира"></option>
+                <option value="Улица Горького"></option>
+                <option value="Садовое кольцо"></option>
+                <option value="Бульварное кольцо"></option>
+                <option value="Улица 1905 года">
+                  <!-- Санкт-Петербург -->
+                </option>
+                <option value="Невский проспект"></option>
+                <option value="Литейный проспект"></option>
+                <option value="Васильевский остров"></option>
+                <option value="Петроградская сторона"></option>
+                <option value="Улица Рубинштейна"></option>
+                <option value="Каменноостровский проспект"></option>
+                <option value="Московский проспект"></option>
+                <option value="Большой проспект П.С."></option>
+                <option value="Английская набережная"></option>
+                <option value="Улица Жуковского">
+                  <!-- Новосибирск -->
+                </option>
+                <option value="Красный проспект"></option>
+                <option value="Улица Ленина"></option>
+                <option value="Улица Кирова"></option>
+                <option value="Улица Гоголя"></option>
+                <option value="Улица Дуси Ковальчук"></option>
+                <option value="Улица Богдана Хмельницкого"></option>
+                <option value="Улица Сибревкома"></option>
+                <option value="Улица Фрунзе"></option>
+                <option value="Улица Нарымская"></option>
+                <option value="Улица Каменская">
+                  <!-- Екатеринбург -->
+                </option>
+                <option value="Проспект Ленина"></option>
+                <option value="Улица Малышева"></option>
+                <option value="Улица Куйбышева"></option>
+                <option value="Улица 8 Марта"></option>
+                <option value="Улица Луначарского"></option>
+                <option value="Улица Щорса"></option>
+                <option value="Улица Толмачёва"></option>
+                <option value="Улица Хохрякова"></option>
+                <option value="Улица Белинского"></option>
+                <option value="Улица Амундсена"></option>
+                <!-- Казань -->
+                <option value="Улица Баумана"></option>
+                <option value="Улица Кремлёвская"></option>
+                <option value="Проспект Победы"></option>
+                <option value="Улица Декабристов"></option>
+                <option value="Улица Чистопольская"></option>
+                <option value="Улица Адоратского"></option>
+                <option value="Улица Вишневского"></option>
+                <option value="Улица Гаврилова"></option>
+                <option value="Улица Павлюхина"></option>
+                <option value="Улица Сибгата Хакима"></option>
+              </datalist>
+            </div>
           </div>
-        </div>
-        <button>Оставить заявку</button>
+        </form>
+        <button type="submit" class="submit-application-btn">
+          Оставить заявку
+        </button>
         <p>
           Нажимая на “Оставить заявку”, вы даете согласине на обработку
           персональных данных
@@ -590,7 +616,7 @@
                 fill="#278640"
               />
             </svg>
-            <a href="#">Выбор города</a>
+            <a href="#" class="open-modal-link">Выбор города</a>
           </div>
         </div>
         <div class="social-networkc">
@@ -656,6 +682,157 @@
         </span>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <button class="close-modal">&times;</button>
+
+        <div class="modal-content">
+          <h2>Помоги озеленить свой город!</h2>
+
+          <form class="modal-form">
+            <div class="choose-city">
+              <img src="../src/svg/place-marker.svg" alt="" />
+              <p class="modal-subtitle">Выбери свой город и район:</p>
+            </div>
+            <!-- Город -->
+            <div class="form-group">
+              <label for="city">Город:</label>
+              <div class="custom-select">
+                <select id="city" name="city" required>
+                  <option value="" disabled selected>Выберите город</option>
+                  <option value="tolyatti">Тольятти</option>
+                  <option value="moscow">Москва</option>
+                  <option value="spb">Санкт-Петербург</option>
+                  <option value="kazan">Казань</option>
+                </select>
+                <span class="select-arrow">▼</span>
+              </div>
+            </div>
+
+            <!-- Улица -->
+            <div class="form-group">
+              <label for="street">Улица:</label>
+              <div class="custom-select">
+                <select id="street" name="street" required>
+                  <option value="" disabled selected>Выберите улицу</option>
+                  <option value="pushkinskaya">ул. Пушкинская</option>
+                  <option value="lenina">ул. Ленина</option>
+                  <option value="sovetskaya">ул. Советская</option>
+                  <option value="gagarina">ул. Гагарина</option>
+                </select>
+                <span class="select-arrow">▼</span>
+              </div>
+            </div>
+
+            <!-- Кнопка отправки -->
+          </form>
+        </div>
+        <button type="submit" class="submit-btn">Оставить заявку</button>
+      </div>
+    </div>
+
+    <!-- Второе модальное окно -->
+    <div class="modal-overlay" id="companyModalOverlay">
+      <div class="modal company-modal">
+        <button class="close-modal">&times;</button>
+
+        <div class="modal-content">
+          <h2>КОЛИЧЕСТВО САЖЕНЦЕВ</h2>
+
+          <form class="modal-form company-form">
+            <!-- Город и форма компании -->
+            <div class="form-row">
+              <div class="form-group">
+                <label>Город</label>
+                <div class="custom-select">
+                  <select>
+                    <option value="" disabled selected>Выберите город</option>
+                    <option value="tolyatti" selected>Тольятти</option>
+                    <option value="moscow">Москва</option>
+                    <option value="spb">Санкт-Петербург</option>
+                  </select>
+                  <span class="select-arrow">▼</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Форма компании</label>
+                <div class="custom-select">
+                  <select>
+                    <option value="" disabled selected>Выберите форму</option>
+                    <option value="private" selected>Частное лицо</option>
+                    <option value="llc">ООО</option>
+                    <option value="jsc">АО</option>
+                    <option value="ie">ИП</option>
+                  </select>
+                  <span class="select-arrow">▼</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Выбор количества саженцев -->
+            <div class="form-group">
+              <label>Выбрать количество саженцев</label>
+              <div class="seedlings-selector">
+                <div class="seedlings-amount">
+                  <span class="amount-label">Саженцев</span>
+                  <div class="amount-controls">
+                    <button type="button" class="amount-btn minus">-</button>
+                    <span class="amount-value">1</span>
+                    <button type="button" class="amount-btn plus">+</button>
+                  </div>
+                  <span class="amount-price">500Р</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Гектары -->
+            <div class="form-group">
+              <label>Или выберите площадь</label>
+              <div class="hectares-selector">
+                <div
+                  class="hectare-option active"
+                  data-hectares="1"
+                  data-price="50000"
+                >
+                  <span class="hectare-amount">1 гектар</span>
+                  <span class="hectare-price">50.000Р</span>
+                </div>
+                <div
+                  class="hectare-option"
+                  data-hectares="10"
+                  data-price="100000"
+                >
+                  <span class="hectare-amount">10 гектар</span>
+                  <span class="hectare-price">100.000Р</span>
+                </div>
+                <div
+                  class="hectare-option"
+                  data-hectares="100"
+                  data-price="150000"
+                >
+                  <span class="hectare-amount">100 гектар</span>
+                  <span class="hectare-price">150.000Р</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Итоговая сумма -->
+            <div class="total-sum">
+              <span class="total-label">Сумма:</span>
+              <span class="total-value">500Р</span>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="submit-btn company-submit">
+              Оставить заявку от компании
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -664,4 +841,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./scripts/slider.js"></script>
   <script src="./scripts/inputs.js"></script>
+  <script src="../scripts/modalWindows.js"></script>
+  <script type="module" src="./scripts/validation.js"></script>
 </html>

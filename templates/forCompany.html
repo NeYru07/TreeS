@@ -58,9 +58,9 @@
                 fill="#278640"
               />
             </svg>
-            <a href="#">Выбор города</a>
+            <a href="#" class="open-modal-link">Выбор города</a>
           </div>
-          <button>Оставить заявку</button>
+          <button class="open-company-modal">Оставить заявку</button>
         </div>
       </header>
       <div class="text-block">
@@ -72,7 +72,7 @@
             вашей корпоративной ДНК, наследием, которое останется на
             десятилетия.
           </p>
-          <button>Записаться на посвещение</button>
+          <button class="open-company-modal">Записаться на посвещение</button>
         </div>
       </div>
       <img src="../src/img/forCompanyFSection.png" alt="" />
@@ -322,7 +322,7 @@
                 fill="#278640"
               />
             </svg>
-            <a href="#">Выбор города</a>
+            <a href="#" class="open-modal-link">Выбор города</a>
           </div>
         </div>
         <div class="social-networkc">
@@ -388,5 +388,157 @@
         </span>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <button class="close-modal">&times;</button>
+
+        <div class="modal-content">
+          <h2>Помоги озеленить свой город!</h2>
+
+          <form class="modal-form">
+            <div class="choose-city">
+              <img src="../src/svg/place-marker.svg" alt="" />
+              <p class="modal-subtitle">Выбери свой город и район:</p>
+            </div>
+            <!-- Город -->
+            <div class="form-group">
+              <label for="city">Город:</label>
+              <div class="custom-select">
+                <select id="city" name="city" required>
+                  <option value="" disabled selected>Выберите город</option>
+                  <option value="tolyatti">Тольятти</option>
+                  <option value="moscow">Москва</option>
+                  <option value="spb">Санкт-Петербург</option>
+                  <option value="kazan">Казань</option>
+                </select>
+                <span class="select-arrow">▼</span>
+              </div>
+            </div>
+
+            <!-- Улица -->
+            <div class="form-group">
+              <label for="street">Улица:</label>
+              <div class="custom-select">
+                <select id="street" name="street" required>
+                  <option value="" disabled selected>Выберите улицу</option>
+                  <option value="pushkinskaya">ул. Пушкинская</option>
+                  <option value="lenina">ул. Ленина</option>
+                  <option value="sovetskaya">ул. Советская</option>
+                  <option value="gagarina">ул. Гагарина</option>
+                </select>
+                <span class="select-arrow">▼</span>
+              </div>
+            </div>
+
+            <!-- Кнопка отправки -->
+          </form>
+        </div>
+        <button type="submit" class="submit-btn">Оставить заявку</button>
+      </div>
+    </div>
+
+    <!-- Второе модальное окно -->
+    <div class="modal-overlay" id="companyModalOverlay">
+      <div class="modal company-modal">
+        <button class="close-modal">&times;</button>
+
+        <div class="modal-content">
+          <h2>КОЛИЧЕСТВО САЖЕНЦЕВ</h2>
+
+          <form class="modal-form company-form">
+            <!-- Город и форма компании -->
+            <div class="form-row">
+              <div class="form-group">
+                <label>Город</label>
+                <div class="custom-select">
+                  <select>
+                    <option value="" disabled selected>Выберите город</option>
+                    <option value="tolyatti" selected>Тольятти</option>
+                    <option value="moscow">Москва</option>
+                    <option value="spb">Санкт-Петербург</option>
+                  </select>
+                  <span class="select-arrow">▼</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Форма компании</label>
+                <div class="custom-select">
+                  <select>
+                    <option value="" disabled selected>Выберите форму</option>
+                    <option value="private" selected>Частное лицо</option>
+                    <option value="llc">ООО</option>
+                    <option value="jsc">АО</option>
+                    <option value="ie">ИП</option>
+                  </select>
+                  <span class="select-arrow">▼</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Выбор количества саженцев -->
+            <div class="form-group">
+              <label>Выбрать количество саженцев</label>
+              <div class="seedlings-selector">
+                <div class="seedlings-amount">
+                  <span class="amount-label">Саженцев</span>
+                  <div class="amount-controls">
+                    <button type="button" class="amount-btn minus">-</button>
+                    <span class="amount-value">1</span>
+                    <button type="button" class="amount-btn plus">+</button>
+                  </div>
+                  <span class="amount-price">500Р</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Гектары -->
+            <div class="form-group">
+              <label>Или выберите площадь</label>
+              <div class="hectares-selector">
+                <div
+                  class="hectare-option active"
+                  data-hectares="1"
+                  data-price="50000"
+                >
+                  <span class="hectare-amount">1 гектар</span>
+                  <span class="hectare-price">50.000Р</span>
+                </div>
+                <div
+                  class="hectare-option"
+                  data-hectares="10"
+                  data-price="100000"
+                >
+                  <span class="hectare-amount">10 гектар</span>
+                  <span class="hectare-price">100.000Р</span>
+                </div>
+                <div
+                  class="hectare-option"
+                  data-hectares="100"
+                  data-price="150000"
+                >
+                  <span class="hectare-amount">100 гектар</span>
+                  <span class="hectare-price">150.000Р</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Итоговая сумма -->
+            <div class="total-sum">
+              <span class="total-label">Сумма:</span>
+              <span class="total-value">500Р</span>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="submit-btn company-submit">
+              Оставить заявку от компании
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="../scripts/modalWindows.js"></script>
 </html>

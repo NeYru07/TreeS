@@ -1,0 +1,287 @@
+// Veriables
+@mixin h1 {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: 0.13em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin btn {
+  border-radius: 1.5625rem;
+  border: none;
+  background-color: #30b04b;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 0.625rem #3b3b3b49;
+}
+
+@mixin green-btn-animation {
+  button:hover {
+    cursor: pointer;
+    background-color: #1f7736;
+  }
+  button:active {
+    transition: 0.1s;
+    transform: scale(0.98);
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0 0 1.25rem #3b3b3b3d;
+}
+
+.first-section {
+  h1 {
+    width: 47.5625rem;
+    height: 8.25rem;
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 16.875rem;
+    left: 6.3438rem;
+  }
+
+  .FSbtn {
+    width: 27.3125rem;
+    height: 5.3125rem;
+    @include btn;
+    position: absolute;
+    top: 29rem;
+    left: 15.8438rem;
+  }
+  @include green-btn-animation;
+
+  p {
+    width: 30.0625rem;
+    height: 5.0625rem;
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 40.5625rem;
+    left: 14.6563rem;
+    color: #6a7081;
+  }
+
+  .video {
+    width: 39.0625rem;
+    height: 36.4375rem;
+    border-radius: 2.5rem;
+    position: absolute;
+    top: 11.75rem;
+    left: 70.7188rem;
+    overflow: hidden;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      overflow: hidden;
+    }
+  }
+}
+
+.second-section{
+	width: 94.5rem;
+	height: 53.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.8125rem;
+	margin-top: 8.125rem;
+
+	h1{@include h1;}
+
+	.grid-cards{
+		width: inherit;
+		height: 47.25rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 1.25rem;
+
+		.card{
+			width: 22.6875rem;
+			height: 23rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1.25rem;
+			background-color: #f4f4f4;
+			border-radius: 2.5rem;
+			padding: 1.25rem;
+			@include shadow;
+
+			button{
+				width: 9.8125rem;
+				height: 3.75rem;
+				@include btn;
+				align-self: center;
+				font-size: 1rem;
+				font-weight: 600;
+			}
+			@include green-btn-animation;
+			
+			.info{
+				width: 20.1875rem;
+				height: 15.5rem;
+				display: flex;
+
+				img{
+					width: 8.25rem;
+					height: 13.125rem;
+				}
+
+				.text-info{
+					width: 11.9375rem;
+					height: 15.5rem;
+					display: flex;
+					flex-direction: column;
+					gap: 1.25rem;
+
+					.top-text{
+						width: inherit;
+						height: 7rem;
+						display: flex;
+						flex-direction: column;
+						gap: 0.125rem;
+
+						h2{
+							font-family: 'Manrope';
+							font-weight: 700;
+							font-size: 2rem;
+							text-transform: uppercase;
+						}
+						p{
+							font-family: 'Manrope';
+							font-weight: 600;
+							font-size: 1rem;
+							color: #2f2f2f;
+						}
+					}
+
+					.bottom-text{
+						width: 8.875rem;
+						height: 7.25rem;
+						display: flex;
+						flex-direction: column;
+						gap: 0.625rem;
+
+						.parameters{
+							width: inherit;
+							height: 2rem;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+
+							p{
+								width: max-content;
+								font-family: 'Manrope';
+								font-weight: 500;
+								font-size: 1rem;
+							}
+
+							span{
+								width: 4.375rem;
+								height: 2rem;
+								border-radius: 1.25rem;
+								padding: 0.3125rem 1.25rem;
+								background-color: #fff;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.third-section{
+	width: 93.625rem;
+	height: 57.5625rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	margin-top: 8.125rem;
+
+	h1{@include h1;}
+
+	.grid-blocks{
+		width: inherit;
+		height: 51.625rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+
+		.bg-shadow{
+			width: 42.125rem;
+			height: 24.5625rem;
+			border-radius: 3.75rem;
+			@include shadow;
+
+			img{
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				object-fit: contain;
+			}
+		}
+
+
+		.grid-block-text{
+			width: 50.25rem;
+			height: 21.3125rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1.875rem;
+			padding: 2.5rem 1.875rem;
+			border-radius: 3.75rem;
+			background-color: #f4f4f4;
+			align-items: center;
+			@include shadow;
+			align-self: center;
+
+			h2{
+				@include h1;
+				letter-spacing: 0;
+
+			}
+
+			p{
+				font-family: 'Manrope';
+				font-weight: 700;
+				font-size: 1rem;
+			}
+		}
+
+		.top-block{
+			width: 93.625rem;
+			height: 24.5625rem;
+			display: flex;
+			gap: 1.25rem;
+			.grid-block-text{align-self: center;}
+		}
+		.bottom-block{
+			width: 92.3125rem;
+			height: 24.5625rem;
+			display: flex;
+			gap: 1.25rem;
+			.grid-block-text{align-self: center;}
+		}
+	}
+}
+
+footer {
+  margin-top: 8.125rem;
+}

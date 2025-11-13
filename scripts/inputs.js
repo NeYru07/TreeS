@@ -257,8 +257,8 @@ const streetsDatabase = {
   ],
 };
 
-const citySelect = document.getElementById("city-select");
-const streetInput = document.getElementById("street-input");
+const citySelect = document.getElementById("city");
+const streetInput = document.getElementById("street");
 const streetsList = document.getElementById("streets-list");
 
 // При выборе города обновляем список улиц

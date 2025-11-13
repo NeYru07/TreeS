@@ -1,17 +1,3 @@
-.active {
-  -webkit-text-decoration: underline 0.1875rem #16a34a !important;
-          text-decoration: underline 0.1875rem #16a34a !important;
-  text-underline-offset: 0.25rem !important;
-}
-
-.active::after {
-  all: unset;
-}
-
-.active:hover::after {
-  all: unset;
-}
-
 .first-section img {
   width: 46rem;
   height: 46rem;

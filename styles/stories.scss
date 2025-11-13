@@ -9,6 +9,7 @@
   text-align: center;
 }
 
+
 @mixin btn {
   border-radius: 1.5625rem;
   border: none;
@@ -36,16 +37,6 @@
   box-shadow: 0 0 1.25rem #3b3b3b3d;
 }
 
-.active {
-  text-decoration: underline 0.1875rem #16a34a !important;
-  text-underline-offset: 0.25rem !important;
-}
-.active::after {
-  all: unset;
-}
-.active:hover::after {
-  all: unset;
-}
 
 .first-section {
   img {

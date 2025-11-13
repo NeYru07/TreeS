@@ -79,20 +79,6 @@
   left: 64.2813rem;
 }
 
-.active {
-  -webkit-text-decoration: underline 0.1875rem #16a34a !important;
-          text-decoration: underline 0.1875rem #16a34a !important;
-  text-underline-offset: 0.25rem !important;
-}
-
-.active::after {
-  all: unset;
-}
-
-.active:hover::after {
-  all: unset;
-}
-
 .second-section {
   width: 97.9375rem;
   height: 43.5625rem;

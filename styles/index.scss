@@ -1,4 +1,18 @@
 // veriables
+
+@mixin H1 {
+  h1 {
+    width: fit-content;
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+
 @mixin btn {
   border-radius: 1.5625rem;
   border: none;
@@ -22,31 +36,10 @@
   }
 }
 
-@mixin underButtonText {
-  font-family: "Manrope";
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: #888;
-  padding-left: 0.8125rem;
-}
-
-@mixin H1 {
-  h1 {
-    width: fit-content;
-    font-family: "Manrope";
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    text-align: center;
-  }
-}
-
 @mixin shadow {
   box-shadow: 0 0 1.25rem #3b3b3b3d;
 }
+
 
 .first-section {
   width: 115.1875rem;
