@@ -60,67 +60,89 @@ document.querySelector('.modal-form').addEventListener('submit', (e) => {
     }
 });
 
+// Второе модальное окно
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded');
-    
-    const modalElement = document.getElementById('companyModalOverlay');
-    console.log('Modal element:', modalElement);
-    
-    if (!modalElement) {
-        console.error('Modal element #companyModalOverlay not found!');
-        return;
-    }
-    
     const companyModal = new Modal('companyModalOverlay');
-    
-    // ИСПРАВЛЕНО: используем правильный класс
     const companyButtons = document.querySelectorAll('.open-company-modal');
     
-    console.log('Found buttons:', companyButtons.length);
-
-    // Обработчик для всех кнопок
-    companyButtons.forEach(button => {
+    // Обработчик для кнопки
+companyButtons.forEach(button => {
         button.addEventListener('click', function() {
             console.log('Button clicked, opening modal');
             companyModal.open();
         });
     });
-
-    // Остальная логика без изменений
+    
+    // Остальная логика модального окна остается без изменений
     const amountValue = document.querySelector('.amount-value');
     const amountPrice = document.querySelector('.amount-price');
     const totalValue = document.querySelector('.total-value');
     let currentAmount = 1;
-    const pricePerSeeding = 500;
+    const pricePerSeedling = 500;
 
-    const plusBtn = document.querySelector('.amount-btn.plus');
-    const minusBtn = document.querySelector('.amount-btn.minus');
-    
-    console.log('Plus button:', plusBtn);
-    console.log('Minus button:', minusBtn);
+    // Кнопки +/-
+    document.querySelector('.amount-btn.plus').addEventListener('click', () => {
+        currentAmount++;
+        updateAmount();
+    });
 
-    if (plusBtn) {
-        plusBtn.addEventListener('click', () => {
-            currentAmount++;
+    document.querySelector('.amount-btn.minus').addEventListener('click', () => {
+        if (currentAmount > 1) {
+            currentAmount--;
             updateAmount();
-        });
-    }
-
-    if (minusBtn) {
-        minusBtn.addEventListener('click', () => {
-            if (currentAmount > 1) {
-                currentAmount--;
-            }
-            updateAmount();
-        });
-    }
+        }
+    });
 
     function updateAmount() {
-        if (amountValue) amountValue.textContent = currentAmount;
-        const totalPrice = currentAmount * pricePerSeeding;
-        if (amountPrice) amountPrice.textContent = totalPrice;
-        if (totalValue) totalValue.textContent = totalPrice;
+        amountValue.textContent = currentAmount;
+        const totalPrice = currentAmount * pricePerSeedling;
+        amountPrice.textContent = `${totalPrice}Р`;
+        totalValue.textContent = `${totalPrice}Р`;
+        
+        document.querySelectorAll('.hectare-option').forEach(option => {
+            option.classList.remove('active');
+        });
     }
 
-    updateAmount();
-});
+    // Логика выбора гектаров
+    document.querySelectorAll('.hectare-option').forEach(option => {
+        option.addEventListener('click', function() {
+            document.querySelectorAll('.hectare-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            
+            this.classList.add('active');
+            
+            const price = this.getAttribute('data-price');
+            totalValue.textContent = `${price}Р`;
+            
+            currentAmount = 1;
+            amountValue.textContent = '1';
+            amountPrice.textContent = '500Р';
+        });
+    });
+
+    // Обработка формы
+    document.querySelector('.company-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const city = this.querySelector('select').value;
+        const companyType = this.querySelectorAll('select')[1].value;
+        const amount = currentAmount;
+        const total = totalValue.textContent;
+        
+        if (city && companyType) {
+            console.log('Заявка от компании:', { city, companyType, amount, total });
+            alert('Заявка от компании успешно отправлена! 🌳');
+            companyModal.close();
+            this.reset();
+            currentAmount = 1;
+            updateAmount();
+            document.querySelectorAll('.hectare-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+        } else {
+            alert('Пожалуйста, заполните все поля');
+        }
+    });
+	 });
