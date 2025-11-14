@@ -7,7 +7,6 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 
 // --- НАСТРОЙКИ БАЗЫ ДАННЫХ ---
-// !!! ОБЯЗАТЕЛЬНО ИЗМЕНИТЕ ЭТИ ЗНАЧЕНИЯ НА ВАШИ !!!
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'user_tree'); 
 define('DB_PASSWORD', 'SecurePass123!'); 
