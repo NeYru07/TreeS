@@ -986,7 +986,9 @@
 }
 
 @media (max-width: 48rem) {
-	body{margin-top: 0.625rem;}
+  body {
+    margin-top: 0.625rem;
+  }
   .first-section {
     h1 {
       width: inherit;
@@ -1002,32 +1004,32 @@
     .sign-up {
       width: 27.75rem;
       height: 11.25rem;
-		top: 12.5rem;
-		left: 0.4688rem;
+      top: 12.5rem;
+      left: 0.4688rem;
       gap: 1rem;
 
       h4 {
         width: inherit;
         font-size: 1rem;
       }
-		.sign-up-btn {
-		  width: 21.5625rem;
-		  height: 6.125rem;
-		  gap: 0;
+      .sign-up-btn {
+        width: 21.5625rem;
+        height: 6.125rem;
+        gap: 0;
 
-		  button {
-			 width: inherit;
-			 height: 3.75rem;
-			 font-size: 1rem;
-		  }
-		  p {
-			 width: inherit;
-			 font-size: 0.875rem;
-			 letter-spacing: 0.13em;
-			 text-transform: uppercase;
-			 color: #888888;
-		  }
-		}
+        button {
+          width: inherit;
+          height: 3.75rem;
+          font-size: 1rem;
+        }
+        p {
+          width: inherit;
+          font-size: 0.875rem;
+          letter-spacing: 0.13em;
+          text-transform: uppercase;
+          color: #888888;
+        }
+      }
     }
 
     .rectangle {
@@ -1035,7 +1037,7 @@
       height: 25.2919rem;
       top: 24.0375rem;
       left: 4.3613rem;
-		border-radius: 1rem;
+      border-radius: 1rem;
     }
 
     .rectangle2 {
@@ -1043,7 +1045,7 @@
       height: 25.2919rem;
       top: 24.6875rem;
       left: 4.5625rem;
-		border-radius: 1rem;
+      border-radius: 1rem;
     }
 
     img {
@@ -1057,12 +1059,12 @@
   .second-section {
     width: 29.125rem;
     height: 49.625rem;
-	 gap: 1.25rem;
+    gap: 1.25rem;
 
     h1 {
       font-size: 1.25rem;
-		align-self: center;
-		text-align: center;
+      align-self: center;
+      text-align: center;
     }
 
     .swipe-block {
@@ -1070,8 +1072,8 @@
       height: 42.5rem !important;
 
       .slide {
-			width: 22.8125rem !important;
-			height: 40.625rem !important;
+        width: 22.8125rem !important;
+        height: 40.625rem !important;
         flex-direction: column !important;
         gap: 0 !important;
 
@@ -1080,15 +1082,15 @@
           height: 26.6875rem !important;
         }
 
-		  .secondImg{
-			width: 25.75rem !important;
-			height: 25.75rem !important;
-		  }
+        .secondImg {
+          width: 25.75rem !important;
+          height: 25.75rem !important;
+        }
 
-		  .thirdImg{
-			width: 27rem !important;
-			height: 22.5rem !important;
-		  }
+        .thirdImg {
+          width: 27rem !important;
+          height: 22.5rem !important;
+        }
 
         .about-block {
           width: inherit !important;
@@ -1105,7 +1107,7 @@
             }
 
             h4 {
-					width: 22.25rem !important;
+              width: 22.25rem !important;
               font-size: 0.75rem !important;
             }
           }
@@ -1116,17 +1118,17 @@
             gap: 0.3125rem !important;
 
             button {
-              font-size: 1rem !important; 
+              font-size: 1rem !important;
               width: inherit !important;
               height: 3.875rem !important;
             }
 
             p {
-					height: max-content !important;
+              height: max-content !important;
               font-size: 0.75rem !important;
-				  text-transform: uppercase;
-				  color: #888;
-				  padding-left: 0.625rem ;
+              text-transform: uppercase;
+              color: #888;
+              padding-left: 0.625rem;
             }
           }
         }
@@ -1135,54 +1137,56 @@
   }
 
   .third-section {
-    width: 29.125rem;
+    height: max-content;
+    width: 29.125rem !important;
 
     h1 {
-      font-size: 1.25rem;
+      font-size: 1.25rem !important;
     }
 
     .description {
-      width: 23.625rem;
-      flex-direction: column;
-      gap: 0.625rem;
+      height: max-content;
+      width: 23.625rem !important;
+      flex-direction: column !important;
+      gap: 0.625rem !important;
 
       .desc-block {
-        width: inherit;
+        width: inherit !important;
         p {
-          font-size: 1.25rem;
+          font-size: 1.2175rem !important;
         }
         img {
-          width: 23.375rem;
-          height: 21.6875rem;
+          width: 23.375rem !important;
+          height: 21.6875rem !important;
         }
       }
 
       .DBF {
-        height: 23rem;
+        height: 25rem !important;
       }
 
       .DBS {
-        height: 17.9375rem;
-        border: 0.3044rem;
+        height: 17.9375rem !important;
+        border: 0.3044rem !important;
       }
 
       .DBT {
-        height: 23.125rem;
+        height: 23.125rem !important;
       }
     }
 
     .third-text-blocks {
-      width: inherit;
-      height: 21.6875rem;
-      flex-direction: column;
-      gap: 0.625rem;
+      width: inherit !important;
+      height: 21.6875rem !important;
+      flex-direction: column !important;
+      gap: 0.625rem !important;
 
       .text-block {
-        width: inherit;
-        height: 10.375rem;
-        border: 0.375rem;
+        width: inherit !important;
+        height: 10.375rem !important;
+        border: 0.375rem !important;
         p {
-          font-size: 1.25rem;
+          font-size: 1.25rem !important;
         }
       }
     }
@@ -1295,7 +1299,7 @@
         height: 6.25rem;
         top: 18.875rem;
         left: 8.25rem;
-		  rotate: -20deg;
+        rotate: -20deg;
       }
 
       .line3 {
@@ -1303,13 +1307,14 @@
         height: 6.25rem;
         top: 28.8125rem;
         left: 5.625rem;
-		  rotate: 20deg;
+        rotate: 20deg;
       }
     }
   }
 
   .five-section {
-    width: 15rem;
+    width: 26.25rem;
+    height: max-content;
 
     h1 {
       font-size: 1.25rem;
@@ -1395,9 +1400,11 @@
   }
 
   .seven-section {
-    height: 43.4375rem;
-    padding: 1.875rem 0.625rem;
-    gap: 1.875rem;
+    height: 43.4375rem !important;
+    width: 30rem !important;
+    padding: 1.875rem 0.625rem !important;
+    gap: 1.875rem !important;
+    flex-direction: column;
 
     .text-block {
       width: 25.8125rem;
@@ -1411,6 +1418,7 @@
       .text-head {
         width: inherit;
         height: inherit;
+        gap: 0.3125rem;
 
         h1 {
           font-size: 1.5rem;
@@ -1426,8 +1434,8 @@
       height: 31rem;
       gap: 0.9375rem;
 
-      .form {
-        width: 28.6875rem;
+      form {
+        width: inherit !important;
         height: 22rem;
         gap: 0.625rem;
         flex-direction: column;
@@ -1461,6 +1469,15 @@
               width: 13.8906rem;
               height: inherit;
               border-radius: 0.6563rem;
+              font-size: 0.6875rem;
+              color: #000;
+              font-weight: 400;
+            }
+
+            input::placeholder {
+              font-size: 0.6875rem;
+              color: #000;
+              font-weight: 400;
             }
           }
         }
@@ -1470,10 +1487,10 @@
         height: 5.625rem;
         font-size: 1.5rem;
       }
-
-      p {
-        font-size: 0.75rem;
-      }
+    }
+    p {
+      width: inherit !important;
+      font-size: 0.75rem !important;
     }
   }
 
@@ -1510,7 +1527,7 @@
       padding: 0 1.25rem;
       border-radius: 2.5rem;
 
-      nav {
+      .desktop-nav {
         display: none;
       }
       .application {
@@ -1518,52 +1535,40 @@
       }
     }
   }
-  .choosing-city {
-    display: none;
-  }
 
   footer {
     width: 30rem;
     height: 28.9375rem;
-    gap: 1.25rem;
+    justify-content: space-between;
     padding-top: 0.625rem;
 
     .head {
-      width: 100%;
+      width: inherit;
       height: 3.125rem;
       margin: 0 0.5469rem;
       justify-content: space-between;
 
       .head-logo {
-        width: 8.6944rem;
+        width: inherit;
         height: 1.875rem;
+        justify-content: space-between;
       }
+      .choose-city {
+        width: 10.775rem !important;
+        height: 1.9694rem !important;
 
-      .mobile {
-        display: flex;
+        svg {
+          width: 1.5rem;
+          height: 1.2813rem;
+        }
+
+        a {
+          font-size: 1.25rem;
+        }
       }
 
       .desktop {
         display: none;
-      }
-
-      .social-networkc {
-        width: 13.3125rem;
-        height: 1.375rem;
-        gap: 0.9375rem;
-
-        p {
-          font-size: 1rem;
-        }
-
-        .social-icons {
-          gap: 0.9375rem;
-
-          svg {
-            width: 2rem;
-            height: 1.25rem;
-          }
-        }
       }
     }
 
@@ -1577,6 +1582,26 @@
 
       a {
         font-size: 1.25rem;
+      }
+
+      .social-networkc .mobile {
+        display: flex !important;
+        width: 13.3125rem;
+        height: 1.375rem;
+        gap: 0.9375rem;
+
+        p {
+          font-size: 1rem !important;
+        }
+
+        .social-icons {
+          gap: 0.9375rem !important;
+
+          svg {
+            width: 2rem !important;
+            height: 1.25rem !important;
+          }
+        }
       }
     }
 
@@ -1596,4 +1621,217 @@
       }
     }
   }
+}
+
+/* Стили для кнопки бургера */
+.burger-menu-toggle {
+  display: none; /* По умолчанию скрываем на десктопе */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.625rem;
+  z-index: 1001; /* Поверх всего */
+}
+
+.burger-icon {
+  width: 1.875rem;
+  height: 1.5rem;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.burger-icon span {
+  display: block;
+  position: absolute;
+  height: 0.1875rem;
+  width: 100%;
+  background: #30b04b; /* Цвет полосок бургера */
+  border-radius: 0.5625rem;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger-icon span:nth-child(1) {
+  top: 0rem;
+}
+
+.burger-icon span:nth-child(2) {
+  top: 0.625rem;
+}
+
+.burger-icon span:nth-child(3) {
+  top: 1.25rem;
+}
+
+.burger-menu-toggle.open .burger-icon span:nth-child(1) {
+  top: 0.625rem;
+  width: 0%;
+  left: 50%;
+}
+
+.burger-menu-toggle.open .burger-icon span:nth-child(2) {
+  transform: rotate(45deg);
+  left: -30%;
+  top: 30%;
+}
+
+.burger-menu-toggle.open .burger-icon span:nth-child(3) {
+  transform: rotate(-45deg);
+  left: -30%;
+  top: 30%;
+}
+
+.burger-menu-toggle.open .burger-icon span:nth-child(4) {
+  top: 0.625rem;
+  width: 0%;
+  left: 50%;
+}
+
+/* Стили для overlay (темный фон) */
+.mobile-menu-overlay {
+  display: none; /* По умолчанию скрыто */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Темный полупрозрачный фон */
+  z-index: 1000;
+  justify-content: flex-end; /* Выравнивает меню справа */
+  align-items: flex-start;
+}
+
+.mobile-menu-overlay.open {
+  display: flex;
+}
+
+/* Стили для самого контента меню (белый блок справа) */
+.mobile-menu-content {
+  background-color: #fff; /* Белый фон */
+  width: 80%; /* Ширина меню */
+  max-width: 20rem; /* Максимальная ширина, если нужно */
+  height: 100%;
+  padding: 1.25rem;
+  box-shadow: -0.3125rem 0 0.9375rem rgba(0, 0, 0, 0.2);
+  transform: translateX(100%); /* Изначально скрыто справа */
+  transition: transform 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem; /* Отступы между блоками */
+}
+
+.mobile-menu-overlay.open .mobile-menu-content {
+  transform: translateX(0); /* Выдвигается слева */
+}
+
+/* Кнопка закрытия */
+.close-menu-btn {
+  align-self: flex-end; /* Выравнивание в правом верхнем углу */
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Навигация */
+.mobile-nav {
+  align-self: flex-start;
+  width: 100%;
+  height: max-content;
+  margin-bottom: 10.75rem;
+  margin-left: 4.5625rem;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.875rem; /* Отступы между пунктами */
+}
+
+.mobile-nav li a {
+  text-decoration: none;
+  /* 💥 Изменено на БЕЛЫЙ цвет, как на темном скриншоте */
+  color: #fff;
+  font-size: 1.5rem; /* Крупный шрифт */
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.625rem 0;
+  display: block;
+}
+
+.mobile-nav li a:hover {
+  /* 💥 Изменено на фирменный ЗЕЛЕНЫЙ при наведении */
+  color: #30b04b;
+}
+
+/* Блок действий (кнопки) */
+.mobile-menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Увеличенный отступ */
+  width: 100%;
+  align-items: center;
+}
+
+.city-select-btn {
+  /* @include btn; - Добавьте, если этот миксин есть */
+  background-color: transparent;
+  border: 0.0625rem solid #fff; /* БЕЛАЯ рамка */
+  color: #fff; /* БЕЛЫЙ текст */
+  padding: 0.9375rem 1.25rem;
+  border-radius: 1.5625rem; /* Скругление как у вашего миксина */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%; /* Ширина на 100% контейнера */
+  justify-content: center;
+}
+
+.city-select-btn svg {
+  fill: #fff; /* БЕЛАЯ иконка города */
+}
+
+/* Стиль кнопки "Оставить заявку" */
+.submit-application-btn.menu-btn {
+  /* @include btn; - Добавьте, если этот миксин есть */
+  background-color: #30b04b; /* Зеленый фон */
+  color: white;
+  padding: 0.9375rem 1.875rem;
+  border: none;
+  border-radius: 1.5625rem; /* Скругление как у вашего миксина */
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  width: 100%; /* Ширина на 100% контейнера */
+  transition: background-color 0.3s ease;
+}
+
+.submit-application-btn.menu-btn:hover {
+  background-color: #1f7736;
+}
+
+/* Медиа-запрос для отображения бургера на мобильных */
+@media (max-width: 48rem) {
+  .burger-menu-toggle {
+    display: block;
+  }
+}
+
+.close-menu-btn {
+  opacity: 0;
 }

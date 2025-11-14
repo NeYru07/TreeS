@@ -146,3 +146,41 @@ companyButtons.forEach(button => {
         }
     });
 	 });
+
+	//  burger menu
+	document.addEventListener('DOMContentLoaded', function() {
+		const burgerToggle = document.querySelector('.burger-menu-toggle');
+		const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+		const closeMenuBtn = document.querySelector('.close-menu-btn');
+		const body = document.body;
+	 
+		if (burgerToggle && mobileMenuOverlay && closeMenuBtn) {
+		  burgerToggle.addEventListener('click', function() {
+			 mobileMenuOverlay.classList.toggle('open');
+			 burgerToggle.classList.toggle('open');
+			 body.classList.toggle('no-scroll');
+		  });
+	 
+		  closeMenuBtn.addEventListener('click', function() {
+			 mobileMenuOverlay.classList.remove('open');
+			 burgerToggle.classList.remove('open');
+			 body.classList.remove('no-scroll');
+		  });
+	 
+		  // Закрытие по клику вне меню (на оверлее)
+		  mobileMenuOverlay.addEventListener('click', function(e) {
+			 if (e.target === mobileMenuOverlay) {
+				mobileMenuOverlay.classList.remove('open');
+				burgerToggle.classList.remove('open');
+				body.classList.remove('no-scroll');
+			 }
+		  });
+		}
+		const style = document.createElement('style');
+		style.textContent = `
+		  body.no-scroll {
+			 overflow: hidden;
+		  }
+		`;
+		document.head.append(style);
+	 });
